@@ -1,0 +1,78 @@
+// Variables 
+$container-width: 780px !default
+
+$font-family-base: 'Josefin Sans', sans-serif
+$font-size-base: 16px
+$font-weight-base: 300
+
+$main-space: 80px
+
+body 
+    font-family: $font-family-base
+    font-size: $font-size-base
+    font-weight: $font-weight-base 
+
+pre 
+    margin-bottom: 35px
+
+.container 
+    width: $container-width
+    margin: 0 auto
+    max-width: 100%
+
+#header
+    padding: 10px 0
+
+#main
+    margin: $main-space 0
+
+#footer 
+    padding: 30px 0
+    border-top: solid 1px #fafafa
+
+.owl-carousel
+
+    .item
+
+        h4 
+            padding: 20px
+            background: #ccc
+            text-align: center
+            border-radius: 2px
+    
+        &.red
+
+            h4 
+                background: red 
+                color: #FFF 
+        
+        &.blue 
+
+            h4 
+                background: blue 
+                color: #FFF
+
+.owl-filter-bar
+    margin-bottom: 35px 
+    text-align: center
+
+    .item
+        color: #222 
+        border-bottom: solid 1px transparent
+
+        &:not(:last-child) 
+            margin-right: 20px 
+
+        &.current 
+            border-bottom-color: #222
+            font-weight: bold
+
+.sticky-btn
+    position: fixed
+    right: 20px
+    bottom: 20px
+    z-index: 9
+
+.coffee-btn
+    float: right
+    

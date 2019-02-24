@@ -1,0 +1,17 @@
+{
+  "name": "owlcarousel2-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.7.4",
+    "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4"
+  }
+}

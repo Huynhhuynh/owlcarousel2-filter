@@ -1,0 +1,72 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+pre {
+  margin-bottom: 35px;
+}
+
+.container {
+  width: 780px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+#header {
+  padding: 10px 0;
+}
+
+#main {
+  margin: 80px 0;
+}
+
+#footer {
+  padding: 30px 0;
+  border-top: solid 1px #fafafa;
+}
+
+.owl-carousel .item h4 {
+  padding: 20px;
+  background: #ccc;
+  text-align: center;
+  border-radius: 2px;
+}
+.owl-carousel .item.red h4 {
+  background: red;
+  color: #FFF;
+}
+.owl-carousel .item.blue h4 {
+  background: blue;
+  color: #FFF;
+}
+
+.owl-filter-bar {
+  margin-bottom: 35px;
+  text-align: center;
+}
+.owl-filter-bar .item {
+  color: #222;
+  border-bottom: solid 1px transparent;
+}
+.owl-filter-bar .item:not(:last-child) {
+  margin-right: 20px;
+}
+.owl-filter-bar .item.current {
+  border-bottom-color: #222;
+  font-weight: bold;
+}
+
+.sticky-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9;
+}
+
+.coffee-btn {
+  float: right;
+}
+
+/*# sourceMappingURL=theme.css.map */

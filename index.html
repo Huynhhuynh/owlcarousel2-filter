@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="owlcarousel filter, carousel filter, owlcarousel, filter carousel">
+    <title>OwlCarousel 2 - Filter</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="dist/theme.css">
+</head>
+<body>
+    <div id="page">
+        <header id="header">
+            <div class="container">
+                <strong>Owl Carousel Filter</strong> - v1
+            </div>
+        </header>
+        <main id="main">
+            <div class="container">
+                
+                <nav class="owl-filter-bar">
+                    <a href="#" class="item" data-owl-filter="*">All</a>
+                    <a href="#" class="item" data-owl-filter=".red">Red</a>
+                    <a href="#" class="item" data-owl-filter=".blue">Blue</a>
+                </nav>
+
+                <div class="owl-carousel owl-theme">
+                    <div class="item red"><h4>1</h4></div>
+                    <div class="item red"><h4>2</h4></div>
+                    <div class="item blue"><h4>3</h4></div>
+                    <div class="item"><h4>4</h4></div>
+                    <div class="item"><h4>5</h4></div>
+                    <div class="item red"><h4>6</h4></div>
+                    <div class="item"><h4>7</h4></div>
+                    <div class="item"><h4>8</h4></div>
+                    <div class="item blue"><h4>9</h4></div>
+                    <div class="item"><h4>10</h4></div>
+                    <div class="item blue"><h4>11</h4></div>
+                    <div class="item"><h4>12</h4></div>
+                </div>
+
+                <hr>
+
+                <h4 class="title">Html</h4>
+                <pre>
+&lt;nav class=&quot;owl-filter-bar&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;item&quot; data-owl-filter=&quot;*&quot;&gt;All&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;item&quot; data-owl-filter=&quot;.red&quot;&gt;Red&lt;/a&gt;
+    &lt;a href=&quot;#&quot; class=&quot;item&quot; data-owl-filter=&quot;.blue&quot;&gt;Blue&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;div class=&quot;owl-carousel owl-theme&quot;&gt;
+    &lt;div class=&quot;item red&quot;&gt;&lt;h4&gt;1&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item red&quot;&gt;&lt;h4&gt;2&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item blue&quot;&gt;&lt;h4&gt;3&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;h4&gt;4&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;h4&gt;5&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item red&quot;&gt;&lt;h4&gt;6&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;h4&gt;7&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;h4&gt;8&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item blue&quot;&gt;&lt;h4&gt;9&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;h4&gt;10&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item blue&quot;&gt;&lt;h4&gt;11&lt;/h4&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;h4&gt;12&lt;/h4&gt;&lt;/div&gt;
+&lt;/div&gt;
+                </pre>
+
+                <hr>
+
+                <h4 class="title">OwlCarousel 2 - Init</h4>
+                <pre>
+var owl = $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+                </pre>
+
+                <hr>
+
+                <h4 class="title">OwlCarousel 2 - Filter</h4>
+                <pre>
+// owl.owlcarousel2_filter( '.blue' );
+
+$( '.owl-filter-bar' ).on( 'click', '.item', function() {
+
+    var $item = $(this);
+    var filter = $item.data( 'owl-filter' )
+
+    owl.owlcarousel2_filter( filter );
+
+} )
+                </pre>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container">
+                by <strong>Bearsthemes</strong>
+
+                <a class="coffee-btn" href="https://www.buymeacoffee.com/QO8xRTw" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/owl.carousel/dist/owl.carousel.js"></script>
+<script src="dist/owlcarousel2-filter.min.js"></script>
+
+<script>
+
+// Owl carousel init
+var owl = $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+// Owl carousel filter 
+$( '.owl-filter-bar' ).on( 'click', '.item', function() {
+
+    var $item = $(this);
+    var filter = $item.data( 'owl-filter' )
+
+    $item.addClass( 'current' ).siblings().removeClass( 'current' );
+
+    owl.owlcarousel2_filter( filter );
+
+} )
+
+</script>
+
+</html>
