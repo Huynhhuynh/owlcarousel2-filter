@@ -1,6 +1,7 @@
 # OwlCarousel 2 - Filter
 
 ![Image Preview](https://cdn-std.dprcdn.net/files/acc_472041/FI9q09)
+[Demo](https://huynhhuynh.github.io/owlcarousel2-filter/)
 
 #### Setup demo
 
