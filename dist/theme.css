@@ -12,6 +12,7 @@ pre {
   width: 780px;
   margin: 0 auto;
   max-width: 100%;
+  padding: 0 15px;
 }
 
 #header {
@@ -65,8 +66,13 @@ pre {
   z-index: 9;
 }
 
-.coffee-btn {
+.coffee-btn,
+.link-github {
   float: right;
+}
+
+.link-github svg {
+  width: 32px;
 }
 
 /*# sourceMappingURL=theme.css.map */
