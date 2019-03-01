@@ -7,8 +7,12 @@
 
 ;( function( root, factory ) {
 
-    root.owlcarousel2_filter = factory( root.jQuery );
-
+    if( typeof exports === "object" ) {
+        root.owlcarousel2_filter = factory( root.jQuery );
+    } else {
+        root.owlcarousel2_filter = factory( root.jQuery );
+    }
+ 
 } ) ( window, function( $, args ) {
 
     'use strict';
