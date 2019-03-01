@@ -8,7 +8,7 @@
 ;( function( root, factory ) {
 
     if( typeof exports === "object" ) {
-        root.owlcarousel2_filter = factory( root.jQuery );
+        module.exports = factory( root.jQuery )
     } else {
         root.owlcarousel2_filter = factory( root.jQuery );
     }
