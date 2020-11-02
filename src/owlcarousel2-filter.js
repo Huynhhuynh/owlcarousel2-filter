@@ -1,14 +1,18 @@
 /**
  * OwlCarousel 2 - Filter
  * @author Bear
- * @version 1.0
+ * @version 1.1
  * 
  */
 
 ;( function( root, factory ) {
 
-    root.owlcarousel2_filter = factory( root.jQuery );
-
+    if( typeof exports === "object" ) {
+        module.exports = factory( root.jQuery )
+    } else {
+        root.owlcarousel2_filter = factory( root.jQuery );
+    }
+ 
 } ) ( window, function( $, args ) {
 
     'use strict';
@@ -17,8 +21,8 @@
 
         var owl = this;
         var owl_object = owl.data( 'owl.carousel' );
-        var owl_settings = owl_object.settings;
-
+        var owl_settings = owl_object.options;
+        
         // Destroy OwlCarousel 
         owl.trigger( 'destroy.owl.carousel' );
         

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://huynhhuynh.github.io/owlcarousel2-filter",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/owlcarousel2-filter.min.js",
   "scripts": {
     "start": "http-server ./",
     "test": "echo \"Error: no test specified\" && exit 1"

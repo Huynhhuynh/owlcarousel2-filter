@@ -1,6 +1,6 @@
 # OwlCarousel 2 - Filter
 
-![Image Preview](https://cdn-std.dprcdn.net/files/acc_472041/FI9q09)
+[Demo](https://huynhhuynh.github.io/owlcarousel2-filter/)
 
 #### Setup demo
 
@@ -68,4 +68,11 @@ $( '.owl-filter-bar' ).on( 'click', '.item', function() {
     owl.owlcarousel2_filter( filter );
 
 } )
+```
+
+```
+1.1
+- Fix issue responsive not work
+
+First released
 ```
